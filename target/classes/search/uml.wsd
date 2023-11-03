@@ -1,0 +1,31 @@
+@startuml uml
+class App {
+public static void main( String[] args )
+public static void Read_XML(String file, List<Item> itemList, Map<String, Integer> itemDuplicates, Map<String, Integer> countHouses)
+public static void findDuplicates(List<Item> itemList, Map<String, Integer> addressHashMap)
+private static void CountHouses(List<Item> itemList,  Map<String,Integer> countHouses)
+ private static void Count(List<String> addressListArr, Map<String, Integer> countHouses)
+ private static void dublicate(List<String> addressList, Map<String, Integer> adressHashMap)
+ public static void printMap_1(Map<String, Integer> map)
+ public static void printMap_2(Map<String, Integer> map)
+ public static void read(String file, List<String> addressListArr)
+
+}
+class Root{
+ List<Item> items = new LinkedList<>();
+
+
+}
+class Item {
+    private String city;
+    private String street;
+    private int house;
+    private int floor;
+    public Item(String city, String street, int house, int floor) 
+    public String GetCity()
+    public int GetFloor()
+    public String toString() 
+}
+Item<|--App
+Root<|--App
+@enduml
